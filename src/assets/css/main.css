@@ -1,0 +1,271 @@
+@font-face{font-family:'Gotham Ultra';src:url('../font/GothamUltra.eot');src:url('../font/GothamUltra.eot?#iefix') format('embedded-opentype'),
+url('../font/GothamUltra.woff') format('woff'),
+url('../font/GothamUltra.ttf') format('truetype');font-weight:900;font-style:normal}
+@font-face{font-family:'Gotham';src:url('../font/GothamBold.eot');src:url('../font/GothamBold.eot?#iefix') format('embedded-opentype'),
+url('../font/GothamBold.woff') format('woff'),
+url('../font/GothamBold.ttf') format('truetype');font-weight:bold;font-style:normal}
+
+
+
+html {
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+}
+
+.container {
+  width:100%;
+  top: -22px;
+  position: relative;
+}
+
+.Sidebar {
+  width:275px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  position: fixed;
+  z-index: 15;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  background-color: #EAEAEA;
+  font-size: 13px;
+  font-weight: bold;
+	-webkit-transform: none;
+			transform: none;
+	transition: transform 200ms linear;
+}
+
+.Header {
+  background-color:#454545;
+  padding:18px;
+  box-shadow: 0 1px 3px 0 rgba(0,0,0,0.50);
+  margin:0 0 2em 0;
+}
+
+.Sidebar .Header {
+    width:100%;
+}
+
+.content .Header {
+  -webkit-transform: translateY(-200%);
+      transform: translateY(-200%);
+  transition: transform 200ms linear;
+  margin-top:-20px;
+}
+
+.Sidebar ul {
+  margin:1em;
+  padding:0;
+  list-style-type: none;
+}
+
+.Sidebar li {
+  font-size:18px;
+  font-weight:700;
+  margin:0.25em 0 1em 0;
+  padding:0.25em 1em 1em 1em;
+  border-bottom:1px solid #CACACA;
+}
+
+
+.Sidebar li.selected {
+  font-weight:800;
+  color:#CC2029;
+}
+
+.wrapper {
+  margin-left:265px;
+  padding:30px 0 0 0;
+  position:relative;
+  z-index:30;
+  min-height:100%;
+  background: #FFFFFF;
+  box-shadow: 0 2px 8px 0 rgba(0,0,0,0.10);
+  transition: margin-left 200ms linear;
+}
+
+.content {
+  margin-top:-90px;
+  position: relative;
+  z-index: 30;
+  transition: margin-top 200ms linear;
+}
+
+.codeScreen {
+  width: 50%;
+  background-color: #2E3336;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+
+.button {
+  padding:12px;
+  margin:2em 1em 1em 1em;
+  display:block;
+  text-align:center;
+  background: #707070;
+  border-radius: 6px;
+  font-family:'Gotham';
+  color:#FFF;
+  border:0;
+  text-decoration: none;
+  font-size:18px;
+}
+.button:hover {
+  background:#CC2029;
+}
+
+
+/******************************
+## Push content to left <--- (margin-right:50%) so code goes right
+******************************/
+
+.content p, .content li, .content dt, .content dd {
+    line-height: 1.6;
+    margin-top: 0;
+}
+section>h1, section>h2, section>h3, section>h4, section>h5, section>h6, section>p, section>table, section>ul, section>ol, section>aside, section>dl {
+    margin-right: 50%;
+    padding: 0 28px;
+    box-sizing: border-box;
+    display: block;
+}
+
+section>h1, section>h2, section>div {
+    clear: both;
+}
+
+
+/******************************
+## Notices (alert red, good green, normal grey)
+******************************/
+
+.content aside {
+    padding-top: 1em;
+    padding-bottom: 1em;
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+    background: #F2F2F2;
+    line-height: 1.6;
+}
+
+
+/******************************
+## Code Styles <pre> <code>
+******************************/
+
+pre {
+    overflow: auto;
+}
+
+code, kbd, pre, samp {
+    font-family: monospace, monospace;
+    font-size: 1em;
+}
+
+.content .codeSnippet {
+    padding-top: 2em;
+    padding-bottom: 2em;
+    padding: 2em 28px;
+}
+
+.content .codeSnippet {
+    background-color: #1E2224;
+    color: #fff;
+    margin: 0;
+    width: 50%;
+    float: right;
+    clear: right;
+    box-sizing: border-box;
+}
+
+.content pre>code {
+    background-color: transparent;
+    padding: 0;
+}
+
+.content code {
+    word-break: break-all;
+    word-wrap: break-word;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+}
+
+.content code, .content pre {
+    font-family: Consolas, Menlo, Monaco, "Lucida Console", "Liberation Mono", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New", monospace, serif;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.indent {
+  width:10px;
+  display: inline-block;
+}
+
+.indent-2 {
+  width:20px;
+  display: inline-block;
+}
+
+.indent-3 {
+  width:30px;
+  display: inline-block;
+}
+
+.indent-4 {
+  width:40px;
+  display: inline-block;
+}
+
+.indent-5 {
+  width:50px;
+  display: inline-block;
+}
+
+.indent-6 {
+  width:60px;
+  display: inline-block;
+}
+
+@media (max-width: 930px) {
+  .Sidebar {
+    -webkit-transform: translateX(100%);
+        transform: translateX(100%);
+    transition: transform 200ms linear;
+  }
+
+  .wrapper {
+    margin-left:0;
+    transition: margin-left 200ms linear;
+  }
+}
+@media (max-width: 700px) {
+  .Sidebar {
+    -webkit-transform: translateX(50%);
+        transform: translateX(50%);
+    transition: transform 200ms linear;
+  }
+  .codeScreen {
+    display: none;
+  }
+  .content {
+    margin-top:0;
+    transition: margin-top 200ms linear;
+  }
+  .content .codeSnippet, .content  {
+    width: auto;
+    float: none;
+    margin-bottom:1em;
+  }
+  section>h1, section>h2, section>h3, section>h4, section>h5, section>h6, section>p, section>table, section>ul, section>ol, section>aside, section>dl {
+    margin-right:0;
+  }
+  .content .Header {
+  	-webkit-transform: none;
+  			transform: none;
+  	transition: transform 200ms linear;
+  }
+}
