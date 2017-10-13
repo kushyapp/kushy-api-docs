@@ -230,7 +230,7 @@ code, kbd, pre, samp {
   display: inline-block;
 }
 
-@media (max-width: 930px) {
+@media (max-width: 1100px) {
   .Sidebar {
     -webkit-transform: translateX(100%);
         transform: translateX(100%);
