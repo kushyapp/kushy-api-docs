@@ -20,7 +20,7 @@ export default class Authentication extends Component {
         <p>Kushy allows for GET requests from any public request, just request your data and go!</p>
         <p>As a verified developer you'll gain access to API keys to allow POST, PUT, and DELETE requests. You can register a new Kushy API key at our developer portal.</p>
         <aside class="notice">
-          Looking for our data? Please don't scrape us - <a href="http://github.com/user/kushyapp">download our database on Github</a>
+          Looking for our data? Please don't scrape us - <a href="http://github.com/kushyapp">download our database on Github</a>
         </aside>
       </section>
     );
